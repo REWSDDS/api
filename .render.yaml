@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: your-service-name
+    env: php
+    plan: free
+    buildCommand: "composer install"
+    startCommand: "php -S 0.0.0.0:10000 -t public"
+    envVars:
+      DATABASE_URL: "mysql://<username>:<password>@<host>:<port>/<database>"
